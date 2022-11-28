@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<head>
+	<!-- templatemo 419 black white -->
+    <!-- 
+    Black White
+    http://www.templatemo.com/preview/templatemo_419_black_white
+    -->
+	<title>太原美食信息导览</title>
+	<meta name="keywords" content="" />
+	<meta name="description" content="" />
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link href="http://fonts.googleapis.com/css?family=Open+Sans:300,400,700" rel="stylesheet" type="text/css">
+	<link href="css/bootstrap.min.css" rel="stylesheet" type="text/css">
+	<link href="css/font-awesome.min.css" rel="stylesheet" type="text/css">
+	<link href="css/templatemo_style.css" rel="stylesheet" type="text/css">	
+</head>
+<body>
+	<div class="templatemo-logo visible-xs-block">
+		<div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 black-bg logo-left-container">
+			<h1 class="logo-left">太原美食信息导览</h1>
+		</div>
+		<div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 white-bg logo-right-container">
+			<h1 class="logo-right">总结</h1>
+		</div>			
+	</div>
+	<div class="templatemo-container">
+		<div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 black-bg left-container">
+			<h1 class="logo-left hidden-xs margin-bottom-60">太原美食信息导览</h1>	
+			<div class="tm-left-inner-container">
+				<ul class="nav nav-stacked templatemo-nav">
+				  <li><a href="index.html"><i class="fa fa-shopping-cart fa-medium"></i>餐厅评价</a></li>
+				  <li><a href="services.html"><i class="fa fa-send-o fa-medium"></i>餐厅种类</a></li>
+				  <li><a href="testimonials.html"><i class="fa fa-comments-o fa-medium"></i>餐厅评分</a></li>
+				  <li><a href="about.html"><i class="fa fa-gears fa-medium"></i>人均消费</a></li>
+				  <li><a href="contact.html"><i class="fa fa-envelope-o fa-medium"></i>总结</a></li>
+				</ul>
+			</div>
+		</div> <!-- left section -->
+		<div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 white-bg right-container">
+			<h1 class="logo-right hidden-xs margin-bottom-60">总结</h1>
+			<div class="tm-right-inner-container">
+				<h1 class="templatemo-header"></h1>
+				<div class="row" >
+                    大数据时代，数据会说话，从数据中反映出的事实往往更具有说服力。从数据中了解到太原美食餐厅的各类数据，不仅让食客能够更好的选择餐厅，也能让商户更好的了解自己的经营状况，从而从自身出发做出相应的改变，从而吸引更多顾客光顾。
+
+                   
+                </div>
+				
+			</div>	
+		</div> <!-- right section -->
+	</div>
+	<script src="js/jquery-1.11.1.min.js"></script>
+	<script type="text/javascript">
+		var map = '';
+		var center;
+
+		function initialize() {
+		    var mapOptions = {
+		      zoom: 16,
+		      center: new google.maps.LatLng(16.8496189,96.1288854)
+		  	};
+		  
+		  	map = new google.maps.Map(document.getElementById('map-canvas'),  mapOptions);
+
+		  	google.maps.event.addDomListener(map, 'idle', function() {
+			  calculateCenter();
+			});
+			
+			google.maps.event.addDomListener(window, 'resize', function() {
+			  map.setCenter(center);
+			});
+		}
+
+		function calculateCenter() {
+		  center = map.getCenter();
+		}
+
+		function loadGoogleMap(){
+		    // load google map
+		    var script = document.createElement('script');
+		    script.type = 'text/javascript';
+		    script.src = 'https://maps.googleapis.com/maps/api/js?v=3.exp&sensor=false&' +
+		    'callback=initialize';
+		    document.body.appendChild(script);
+		}
+
+		$(document).ready( function() {
+			loadGoogleMap();
+		});
+
+	</script>	
+</body>
+</html>
