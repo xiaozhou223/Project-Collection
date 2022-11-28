@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>欧姆龙学术空间</title>
+    <link rel="stylesheet" type="text/css" href="static/css/index.css">
+	<!-- <link rel="stylesheet" type="text/css" href="static/css/index - 副本.css"> -->
+	
+    <script src="static/js/rpx4html.js"></script>
+</head>
+<body>
+<section class="index-style" id="index-style">
+    <div class="bg">
+        <img class="img1" src="static/picture/oml-logo.jpg">
+        <img class="img2" style="width: 206px" src="static/picture/365-logo.jpg">
+    </div>
+
+    <div class="bg1">欧 姆 龙 学 术 空 间</div>
+    <div class="hs-bg">
+        <div class="bg_w">
+            <ul>
+                <li class="li1" onclick="toPage1(1)">首&nbsp&nbsp&nbsp&nbsp页</li>
+                <li class="li1" onclick="toPage1('学术活动')">学术活动</li>
+                <li class="li1" onclick="toPage1('专家访谈')">专家访谈</li>
+            </ul>
+            <ul>
+                <li class="li1" onclick="toPage1('临床医学')">临床医学</li>
+                <li class="li1" onclick="toPage1('健康科普')">健康科普</li>
+                <li class="li1" onclick="toPage1('百问百答')">百问百答</li>
+            </ul>
+            <ul>
+                <li class="li2" onclick="toPage2(null, '高血压领域')"><img src="static/picture/bl-icon1.png" alt="">高血压<br>领域
+                </li>
+                <li class="li3"></li>
+                <li class="li2" onclick="toPage2(null, '代谢领域')"><img src="static/picture/bl-icon2.png" alt="">代谢<br>领域
+                </li>
+                <li class="li3"></li>
+                <li class="li2" onclick="toPage2(null, '呼吸系统领域')"><img src="static/picture/bl-icon3.png" alt="">呼吸系统<br>领域
+                </li>
+                <li class="li3"></li>
+                <li class="li2" onclick="toPage2(null, '疼痛及健康领域')"><img src="static/picture/bl-icon4.png" alt="">疼痛及健康<br>领域
+                </li>
+
+            </ul>
+        </div>
+
+        <div class="sea" style="position:relative ;">
+            <input id="searchValue" class="seaInput" type="text" placeholder="请输入关键字和专题名称">
+            <div class="btn_r" onclick="search()">
+                搜索<img src="static/picture/search-btn.jpg" alt="">
+            </div>
+        </div>
+
+        <div class="xs">
+            学术活动
+            <div class="xsDiv1"></div>
+            <div><img src="static/picture/yd.png" width="800px" alt=""></div>
+        </div>
+        <div class="xs_y">
+            <ul>
+                        <li><img src="static/picture/d.png" alt="">
+                            <div onclick="toDetail('F17E457C-3C22-4DC5-B464-A5E59A2DA368')">
+                                &nbsp;&nbsp;第八届中国血压监测学术会议 | 李燕教授：隐蔽性高血压降压治疗保护靶器官临床试验——ANTI-MASK研究与夜间血压监测的重要性
+                            </div>
+                        </li>
+                        <li><img src="static/picture/d.png" alt="">
+                            <div onclick="toDetail('B309D57E-8035-4A1C-8B84-9DFBFE160420')">
+                                &nbsp;&nbsp;第八届中国血压监测学术会议|智慧化高血压管理专题暨2022年五月血压测量月（MMM）项目启动仪式成功举办
+                            </div>
+                        </li>
+                        <li><img src="static/picture/d.png" alt="">
+                            <div onclick="toDetail('4F9765DD-E118-40B4-90B5-77FB677530F6')">
+                                &nbsp;&nbsp;五月血压测量月 | 为爱发声·聚焦血压——关注区域高血压发病特征，多手段提升基层血压筛查力度
+                            </div>
+                        </li>
+                        <li><img src="static/picture/d.png" alt="">
+                            <div onclick="toDetail('05C16496-51E2-4BB9-B96E-10A34378A112')">
+                                &nbsp;&nbsp;传播血压监测理念，助力血压管理事业——第7届中国血压监测学术会议圆满举行
+                            </div>
+                        </li>
+                        <li><img src="static/picture/d.png" alt="">
+                            <div onclick="toDetail('F8B737AB-F227-442F-A403-090D608C346F')">
+                                &nbsp;&nbsp;高血压年会2021 | 规范血压监测，融会智慧路径
+                            </div>
+                        </li>
+            </ul>
+
+            <div class="more" onclick="toPage1('学术活动')">
+                MORE
+            </div>
+        </div>
+    </div>
+
+
+    <div class="xs2">
+        专家访谈
+        <div class="xsDiv2"></div>
+    </div>
+    <div class="xs_y2">
+        <ul>
+                    <ol>
+                        <span class="sp2">
+                                王继光：
+                            <div onclick="toDetail('F17E457C-3C22-4DC5-B464-A5E59A2DA368')">
+                                第八届中国血压监测学术会议 | 李燕教授：隐蔽性高血压降压治疗保护靶器官临床试验——ANTI-MASK研究与夜间血压监测的重要性
+                            </div>
+                        </span>
+                        <span class="sp3">
+                                时间：2022-07-24
+                        </span>
+                    </ol>
+                    <ol>
+                        <span class="sp2">
+                            <div onclick="toDetail('B309D57E-8035-4A1C-8B84-9DFBFE160420')">
+                                第八届中国血压监测学术会议|智慧化高血压管理专题暨2022年五月血压测量月（MMM）项目启动仪式成功举办
+                            </div>
+                        </span>
+                        <span class="sp3">
+                                时间：2022-07-23
+                        </span>
+                    </ol>
+                    <ol>
+                        <span class="sp2">
+                            <div onclick="toDetail('B24C3777-70EE-49EC-843F-47AE1F9503C2')">
+                                专家访谈 | 鲍一笑教授：以网络化、智能化为抓手，进一步提高儿童哮喘控制水平
+                            </div>
+                        </span>
+                        <span class="sp3">
+                                时间：2021-09-17
+                        </span>
+                    </ol>
+                    <ol>
+                        <span class="sp2">
+                            <div onclick="toDetail('EFBCE279-E328-4F4A-BF77-4ED4E6E75A2D')">
+                                高血压年会 2020 | 王继光：2019中国家庭血压监测指南要点解读
+                            </div>
+                        </span>
+                        <span class="sp3">
+                                时间：2020-09-27
+                        </span>
+                    </ol>
+        </ul>
+        <div class="more" onclick="toPage1('专家访谈')">
+            MORE
+        </div>
+    </div>
+    <div class="xs_b">
+        <div class="xs2_1">
+            临床应用
+            <div class="xs2Div3"></div>
+        </div>
+        <div class="xs_y2_1">
+            <ul>
+                        <ol>
+                            <span class="sp4">
+                                <div onclick="toDetail('EFBCE279-E328-4F4A-BF77-4ED4E6E75A2D')">
+                                    高血压年会 2020 | 王继光：2019中国家庭血压监测指南要点解读
+                                </div>
+                            </span>
+                            <span class="sp5">
+                                    时间：2020-09-27
+                            </span>
+                        </ol>
+            </ul>
+
+            <div class="more" onclick="toPage1('临床应用')">
+                MORE
+            </div>
+        </div>
+    </div>
+    <div class="xs2">
+        百问百答
+        <div class="xsWDiv6"></div>
+    </div>
+    <div class="xs_y2">
+        <ul>
+                    <ol>
+                        <span class="sp2">
+                            <div onclick="toDetail('C8D60C04-7D98-4A07-93BA-FAA98B4E34B3')">
+                                疼痛疾病的基础知识
+                            </div>
+                        </span>
+                        <span class="sp3">
+                                时间：2022-10-20
+                        </span>
+                    </ol>
+                    <ol>
+                        <span class="sp2">
+                            <div onclick="toDetail('16BC47FB-CC1E-431F-B357-BAB8F4F4AABC')">
+                                关于体温的基础知识
+                            </div>
+                        </span>
+                        <span class="sp3">
+                                时间：2021-09-30
+                        </span>
+                    </ol>
+        </ul>
+        <div class="more" onclick="toPage1('百问百答')">
+            MORE
+        </div>
+    </div>
+
+    <!-- // -->
+    <div class="xs_b2">
+        <div class="xs2_2">
+            健康科普
+            <div class="xsDiv9"></div>
+        </div>
+        <div class="xs_y2_2">
+            <ul>
+                        <ol>
+                                <span class="sp10"><img src="static/picture/la1.png" alt="" width="392px">
+
+                            </span>
+                            <br>
+                            <span class="sp12">
+                                <div onclick="toDetail('88AD4AFC-F978-403D-894C-9CE045F4D6F5')">
+                                    高血压的控制与冠心病的防治
+                                </div>
+                            </span>
+                        </ol>
+                        <ol>
+                                <span class="sp10"><img src="static/picture/la2.png" alt="" width="392px">
+
+                            </span>
+                            <br>
+                            <span class="sp12">
+                                <div onclick="toDetail('B6F049B5-3B56-4A62-BCBB-457132770458')">
+                                    高血压防治科普小结
+                                </div>
+                            </span>
+                        </ol>
+                        <ol>
+                                <span class="sp10"><img src="static/picture/la3.png" alt="" width="392px">
+
+                            </span>
+                            <br>
+                            <span class="sp12">
+                                <div onclick="toDetail('4C9D9174-5DEA-4224-88FE-2D7C11E7BC70')">
+                                    高血压达标与心律失常的预防
+                                </div>
+                            </span>
+                        </ol>
+                        <ol>
+                                <span class="sp10"><img src="static/picture/la4.png" alt="" width="392px">
+
+                            </span>
+                            <br>
+                            <span class="sp12">
+                                <div onclick="toDetail('83DE8152-B21D-4FCC-B4BD-3BF5E577FA91')">
+                                    预防房颤、脑卒中与稳控高血压
+                                </div>
+                            </span>
+                        </ol>
+            </ul>
+
+            <div class="more" onclick="toPage1('健康科普')">
+                MORE
+            </div>
+        </div>
+        <div class="foot">
+            © Copyright OMRON corporation 2022 All Rights Reserved.
+            <br>
+        </div>
+    </div>
+</section>
+<script type="text/javascript">
+    function toPage1(type) {
+        if (type == "1") {
+            location.href = "/index/";
+        } else {
+            location.href = "/toPage1/" + type;
+        }
+    }
+
+    function toPage2(type1, type2) {
+        location.href = "/toPage2/" + type1 + "/" + type2;
+    }
+
+    function toDetail(unId) {
+        location.href = "/detail/" + unId;
+    }
+
+    function search() {
+        var searchValue = document.getElementById("searchValue").value;
+        if (!searchValue) {
+            return;
+        }
+        location.href = "/searchValue/" + searchValue;
+    }
+	
+	function isMobile(){
+	            if(window.navigator.userAgent.match(/(phone|pad|pod|iPhone|iPod|ios|iPad|Android|Mobile|BlackBerry|IEMobile|MQQBrowser|JUC|Fennec|wOSBrowser|BrowserNG|WebOS|Symbian|Windows Phone)/i)) {
+	              return true; // 移动端
+	            }else{
+	              return false; // PC端
+	            }
+	 }
+	  if(!isMobile()){
+	      console.log(isMobile()) 
+		  // document.getElementById("index-style").style.width="750px";
+		     window.resizeTo(200,200);
+		  // document.getElementsByClassName("index-style").style.width ="750px";
+		 
+	  }
+</script>
+</body>
+
+</html>

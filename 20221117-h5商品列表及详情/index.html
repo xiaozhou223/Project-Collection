@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html lang="en">
+
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<meta name="viewport" content="width=device-width,initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+		<title>商品列表</title>
+		<script src="https://apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js"></script>
+		
+	</head>
+	<style>
+		*{margin: 0;padding: 0;box-sizing: border-box;} .goodsItems{max-width: 750px; background: #f5f5f5;min-height: 100vh;} .header_content { width: 100%; height: 100px; background-image: linear-gradient(90deg,#f66139,#f23434); } .banner_wrap{text-align: center;width: 100%;padding: 0 10px;} .banner_wrap .banner{width: 100%;margin-top: -80px;border-radius: 5px;height: 110px;} .main{margin-top: 10px;padding: 0 10px;box-sizing: border-box;} .goods-row{margin-bottom: 10px; width: 100%;background: #fff;width: 100%;height: 140px;border-radius: 5px;} .d-flex { display: -moz-box; display: -ms-flexbox; display: -webkit-box; display: -webkit-flex; display: box; display: flex } .img_item{width: 140px;height: 100%;} .img_item img{width: 140px;height: 140px;} .right_content{font-size: 14px;color: #333;margin-left: 5px;padding: 5px;width: calc(100% - 140px);} .item_right_title{padding-top: 10px; text-overflow: -o-ellipsis-lastline; overflow: hidden; text-overflow: ellipsis; display: -webkit-box; -webkit-line-clamp: 2; line-clamp: 2; -webkit-box-orient: vertical;} .item_right_title img{width: 20px;vertical-align: sub;}.right_content .price_wrap{margin-top: 18px;align-items: flex-end;} .right_content .price_wrap .huodong{ color: #fe3738; font-family: PingFangSC-Medium; font-size: 12px; } .right_content .price_wrap .huodong .pri{font-family: PingFangSC-Medium;font-size: 20px;margin-right: 5px;} .right_content .price_wrap .origin{margin-left: 0.05rem; padding-bottom: 2.5px; font-family: PingFangSC-Regular; font-size: 10px; color: #999; text-decoration: line-through;} .right_content .rexiao{position: relative; margin-top: 10px} .right_content .rexiao .rexiao_left{width: 168px; height: 22px; display: flex; align-items: center; box-sizing: border-box; padding: 0 0 0 10px; font-size: 11px; color: #c4310b; font-family: PingFangSC-Regular; background-image: linear-gradient(90deg,#fff0dc,#ffdcbd); border-radius: 2px;} .right_content .rexiao .rexiao_left img{ width: 9px; height: 11px; margin-right: 3px; margin-top: 1px; } .right_content .rexiao .qiang{ position: absolute; top: -3.5px; display: flex; justify-content: center; align-items: center; font-size: 12px; color: #fff; right: 15px; width: 75px; height: 26px; background-image: linear-gradient(270deg,#ff4242,#ff7b57); box-shadow: 0 2px 3px 0 rgb(255 37 77 / 21%); border-radius: 4px; } }
+		
+	</style>
+	<body>
+		<div class="goodsItems">
+			<div class="header_content"></div>
+			<div class="banner_wrap"><img style="width: 100%;" src="https://img.alicdn.com/imgextra/i3/2053469401/O1CN01ugabX62JJi8Ceu0AW_!!2053469401.jpg"
+				 alt="" class="banner"></div>
+			<div class="main">
+				<div class="goods-row d-flex">
+					<div class="img_item"><img  src="https://img.alicdn.com/bao/uploaded/i1/2574576912/O1CN01MnwjTg20vkOKljFeI_!!2-item_pic.png_310x310.jpg"
+						 alt=""></div>
+					<div class="right_content">
+						<div class="item_right_title_wrap">
+							<div class="tag_wrap">
+								<div class="item_right_title">
+									<img src="http://celiang.oss-cn-hangzhou.aliyuncs.com/measurement/2022-11/17/Ek7M0phpEdWZl41668697199221117.png">
+									不艺术!藏在艺术史里的82个关键词不艺术!藏在艺术史里的82个关键词不艺术!藏在艺术史里的82个关键词
+								</div>
+
+								<div class="price_wrap d-flex" style="opacity: 1;">
+									<div class="huodong"> ￥<span class="pri">119</span><span></span></div><span class="origin">￥129</span>
+								</div>
+								<div class="rexiao d-flex">
+									<div class="rexiao_left"><img src="http://celiang.oss-cn-hangzhou.aliyuncs.com/measurement/2022-11/17/eEixiphpTrBEwW1668697249221117.png"
+										 alt=""> 热销100+件 </div>
+									<div class="qiang"> 马上抢 </div>
+								</div>
+							</div>
+						</div>
+					</div>
+
+				</div>
+
+				<div class="goods-row d-flex">
+					<div class="img_item"><img src="https://img.alicdn.com/bao/uploaded/i1/731692049/O1CN01kiQC1i1R0U7Ukg4Kc_!!0-item_pic.jpg_310x310.jpg"
+						 alt=""></div>
+					<div class="right_content">
+						<div class="item_right_title_wrap">
+							<div class="tag_wrap">
+								<div class="item_right_title">
+									<img src="http://celiang.oss-cn-hangzhou.aliyuncs.com/measurement/2022-11/17/Ek7M0phpEdWZl41668697199221117.png">
+									送音频+教师指导手册学乐故事书</div>
+
+								<div class="price_wrap d-flex" style="opacity: 1;">
+									<div class="huodong"> ￥<span class="pri">138.5</span><span></span></div><span class="origin">￥149.8</span>
+								</div>
+								<div class="rexiao d-flex">
+									<div class="rexiao_left"><img src="http://celiang.oss-cn-hangzhou.aliyuncs.com/measurement/2022-11/17/eEixiphpTrBEwW1668697249221117.png"
+										 alt=""> 热销100+件 </div>
+									<div class="qiang"> 马上抢 </div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="goods-row d-flex">
+					<div class="img_item"><img src="https://img.alicdn.com/bao/uploaded/i1/2574576912/O1CN01MnwjTg20vkOKljFeI_!!2-item_pic.png_310x310.jpg"
+						 alt=""></div>
+					<div class="right_content">
+						<div class="item_right_title_wrap">
+							<div class="tag_wrap">
+								<div class="item_right_title">
+									<img src="http://celiang.oss-cn-hangzhou.aliyuncs.com/measurement/2022-11/17/Ek7M0phpEdWZl41668697199221117.png">
+									不艺术!藏在艺术史里的82个关键词不艺术!藏在艺术史里的82个关键词不艺术!藏在艺术史里的82个关键词</div>
+
+								<div class="price_wrap d-flex" style="opacity: 1;">
+									<div class="huodong"> ￥<span class="pri">109</span><span></span></div><span class="origin">￥129</span>
+								</div>
+								<div class="rexiao d-flex">
+									<div class="rexiao_left"><img src="http://celiang.oss-cn-hangzhou.aliyuncs.com/measurement/2022-11/17/eEixiphpTrBEwW1668697249221117.png"
+										 alt=""> 热销100+件 </div>
+									<div class="qiang"> 马上抢 </div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="goods-row d-flex">
+					<div class="img_item"><img src="https://img.alicdn.com/bao/uploaded/i1/2453782924/O1CN01BeAKDu1XTEoRd3nTD_!!0-item_pic.jpg_310x310.jpg"
+						 alt=""></div>
+					<div class="right_content">
+						<div class="item_right_title_wrap">
+							<div class="tag_wrap">
+								<div class="item_right_title">
+									<img src="http://celiang.oss-cn-hangzhou.aliyuncs.com/measurement/2022-11/17/Ek7M0phpEdWZl41668697199221117.png">
+									【新世界出版社】中国关键词汉英对照</div>
+
+								<div class="price_wrap d-flex" style="opacity: 1;">
+									<div class="huodong"> ￥<span class="pri">169</span><span></span></div><span class="origin">￥199.9</span>
+								</div>
+								<div class="rexiao d-flex">
+									<div class="rexiao_left"><img src="http://celiang.oss-cn-hangzhou.aliyuncs.com/measurement/2022-11/17/eEixiphpTrBEwW1668697249221117.png"
+										 alt=""> 热销100+件 </div>
+									<div class="qiang"> 马上抢 </div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="goods-row d-flex">
+					<div class="img_item"><img src="https://img.alicdn.com/bao/uploaded/i2/101450072/O1CN01ClwWSw1CP1IAcMLvW_!!0-item_pic.jpg_310x310.jpg"
+						 alt=""></div>
+					<div class="right_content">
+						<div class="item_right_title_wrap">
+							<div class="tag_wrap">
+								<div class="item_right_title">
+									<img src="http://celiang.oss-cn-hangzhou.aliyuncs.com/measurement/2022-11/17/Ek7M0phpEdWZl41668697199221117.png">
+									叶茂中套装3册冲突第二广告人手记</div>
+
+								<div class="price_wrap d-flex" style="opacity: 1;">
+									<div class="huodong"> ￥<span class="pri">110</span><span></span></div><span class="origin">￥129.9</span>
+								</div>
+								<div class="rexiao d-flex">
+									<div class="rexiao_left"><img src="http://celiang.oss-cn-hangzhou.aliyuncs.com/measurement/2022-11/17/eEixiphpTrBEwW1668697249221117.png"
+										 alt=""> 热销100+件 </div>
+									<div class="qiang"> 马上抢 </div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="goods-row d-flex">
+					<div class="img_item"><img src="https://img.alicdn.com/bao/uploaded/i1/2208191633869/O1CN01lxaQaw1eS35I1Z6qD_!!0-item_pic.jpg_310x310.jpg"
+						 alt=""></div>
+					<div class="right_content">
+						<div class="item_right_title_wrap">
+							<div class="tag_wrap">
+								<div class="item_right_title">
+									<img src="http://celiang.oss-cn-hangzhou.aliyuncs.com/measurement/2022-11/17/Ek7M0phpEdWZl41668697199221117.png">
+									不艺术!藏在艺术史里的文化研究关键词文化研究关键词文化研究关键词</div>
+
+								<div class="price_wrap d-flex" style="opacity: 1;">
+									<div class="huodong"> ￥<span class="pri">59</span><span></span></div><span class="origin">￥92.5</span>
+								</div>
+								<div class="rexiao d-flex">
+									<div class="rexiao_left"><img src="http://celiang.oss-cn-hangzhou.aliyuncs.com/measurement/2022-11/17/eEixiphpTrBEwW1668697249221117.png"
+										 alt=""> 热销100+件 </div>
+									<div class="qiang"> 马上抢 </div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="goods-row d-flex">
+					<div class="img_item"><img src="https://img.alicdn.com/bao/uploaded/i2/832978172/O1CN01BYQQkn2AEpRElKb3I_!!0-item_pic.jpg_310x310.jpg"
+						 alt=""></div>
+					<div class="right_content">
+						<div class="item_right_title_wrap">
+							<div class="tag_wrap">
+								<div class="item_right_title">
+									<img src="http://celiang.oss-cn-hangzhou.aliyuncs.com/measurement/2022-11/17/Ek7M0phpEdWZl41668697199221117.png">
+									【3-9岁】快乐关键词英语分级w瓢虫</div>
+
+								<div class="price_wrap d-flex" style="opacity: 1;">
+									<div class="huodong"> ￥<span class="pri">48.8</span><span></span></div><span class="origin">￥88</span>
+								</div>
+								<div class="rexiao d-flex">
+									<div class="rexiao_left"><img src="http://celiang.oss-cn-hangzhou.aliyuncs.com/measurement/2022-11/17/eEixiphpTrBEwW1668697249221117.png"
+										 alt=""> 热销100+件 </div>
+									<div class="qiang"> 马上抢 </div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="goods-row d-flex">
+					<div class="img_item"><img src="https://img.alicdn.com/bao/uploaded/i1/2574576912/O1CN01MnwjTg20vkOKljFeI_!!2-item_pic.png_310x310.jpg"
+						 alt=""></div>
+					<div class="right_content">
+						<div class="item_right_title_wrap">
+							<div class="tag_wrap">
+								<div class="item_right_title">
+									<img src="http://celiang.oss-cn-hangzhou.aliyuncs.com/measurement/2022-11/17/Ek7M0phpEdWZl41668697199221117.png">
+									<img src="http://celiang.oss-cn-hangzhou.aliyuncs.com/measurement/2022-11/17/Ek7M0phpEdWZl41668697199221117.png">
+									不艺术!藏在艺术史里的82个关键词不艺术!藏在艺术史里的82个关键词不艺术!藏在艺术史里的82个关键词
+								</div>
+
+								<div class="price_wrap d-flex" style="opacity: 1;">
+									<div class="huodong"> ￥<span class="pri">119</span><span></span></div><span class="origin">￥129</span>
+								</div>
+								<div class="rexiao d-flex">
+									<div class="rexiao_left"><img src="http://celiang.oss-cn-hangzhou.aliyuncs.com/measurement/2022-11/17/eEixiphpTrBEwW1668697249221117.png"
+										 alt=""> 热销100+件 </div>
+									<div class="qiang"> 马上抢 </div>
+								</div>
+							</div>
+						</div>
+					</div>
+
+				</div>
+
+				<div class="goods-row d-flex">
+					<div class="img_item"><img src="https://img.alicdn.com/bao/uploaded/i1/731692049/O1CN01kiQC1i1R0U7Ukg4Kc_!!0-item_pic.jpg_310x310.jpg"
+						 alt=""></div>
+					<div class="right_content">
+						<div class="item_right_title_wrap">
+							<div class="tag_wrap">
+								<div class="item_right_title">
+									<img src="http://celiang.oss-cn-hangzhou.aliyuncs.com/measurement/2022-11/17/Ek7M0phpEdWZl41668697199221117.png">
+									送音频+教师指导手册学乐故事书</div>
+
+								<div class="price_wrap d-flex" style="opacity: 1;">
+									<div class="huodong"> ￥<span class="pri">138.5</span><span></span></div><span class="origin">￥149.8</span>
+								</div>
+								<div class="rexiao d-flex">
+									<div class="rexiao_left"><img src="http://celiang.oss-cn-hangzhou.aliyuncs.com/measurement/2022-11/17/eEixiphpTrBEwW1668697249221117.png"
+										 alt=""> 热销100+件 </div>
+									<div class="qiang"> 马上抢 </div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="goods-row d-flex">
+					<div class="img_item"><img src="https://img.alicdn.com/bao/uploaded/i1/2574576912/O1CN01MnwjTg20vkOKljFeI_!!2-item_pic.png_310x310.jpg"
+						 alt=""></div>
+					<div class="right_content">
+						<div class="item_right_title_wrap">
+							<div class="tag_wrap">
+								<div class="item_right_title">
+									<img src="http://celiang.oss-cn-hangzhou.aliyuncs.com/measurement/2022-11/17/Ek7M0phpEdWZl41668697199221117.png">
+									不艺术!藏在艺术史里的82个关键词不艺术!藏在艺术史里的82个关键词不艺术!藏在艺术史里的82个关键词</div>
+
+								<div class="price_wrap d-flex" style="opacity: 1;">
+									<div class="huodong"> ￥<span class="pri">109</span><span></span></div><span class="origin">￥129</span>
+								</div>
+								<div class="rexiao d-flex">
+									<div class="rexiao_left"><img src="http://celiang.oss-cn-hangzhou.aliyuncs.com/measurement/2022-11/17/eEixiphpTrBEwW1668697249221117.png"
+										 alt=""> 热销100+件 </div>
+									<div class="qiang"> 马上抢 </div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="goods-row d-flex">
+					<div class="img_item"><img src="https://img.alicdn.com/bao/uploaded/i1/2453782924/O1CN01BeAKDu1XTEoRd3nTD_!!0-item_pic.jpg_310x310.jpg"
+						 alt=""></div>
+					<div class="right_content">
+						<div class="item_right_title_wrap">
+							<div class="tag_wrap">
+								<div class="item_right_title">
+									<img src="http://celiang.oss-cn-hangzhou.aliyuncs.com/measurement/2022-11/17/Ek7M0phpEdWZl41668697199221117.png">
+									【新世界出版社】中国关键词汉英对照</div>
+
+								<div class="price_wrap d-flex" style="opacity: 1;">
+									<div class="huodong"> ￥<span class="pri">169</span><span></span></div><span class="origin">￥199.9</span>
+								</div>
+								<div class="rexiao d-flex">
+									<div class="rexiao_left"><img src="http://celiang.oss-cn-hangzhou.aliyuncs.com/measurement/2022-11/17/eEixiphpTrBEwW1668697249221117.png"
+										 alt=""> 热销100+件 </div>
+									<div class="qiang"> 马上抢 </div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="goods-row d-flex">
+					<div class="img_item"><img src="https://img.alicdn.com/bao/uploaded/i2/101450072/O1CN01ClwWSw1CP1IAcMLvW_!!0-item_pic.jpg_310x310.jpg"
+						 alt=""></div>
+					<div class="right_content">
+						<div class="item_right_title_wrap">
+							<div class="tag_wrap">
+								<div class="item_right_title">
+									<img src="http://celiang.oss-cn-hangzhou.aliyuncs.com/measurement/2022-11/17/Ek7M0phpEdWZl41668697199221117.png">
+									叶茂中套装3册冲突第二广告人手记</div>
+
+								<div class="price_wrap d-flex" style="opacity: 1;">
+									<div class="huodong"> ￥<span class="pri">110</span><span></span></div><span class="origin">￥129.9</span>
+								</div>
+								<div class="rexiao d-flex">
+									<div class="rexiao_left"><img src="http://celiang.oss-cn-hangzhou.aliyuncs.com/measurement/2022-11/17/eEixiphpTrBEwW1668697249221117.png"
+										 alt=""> 热销100+件 </div>
+									<div class="qiang"> 马上抢 </div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="goods-row d-flex">
+					<div class="img_item"><img src="https://img.alicdn.com/bao/uploaded/i1/2208191633869/O1CN01lxaQaw1eS35I1Z6qD_!!0-item_pic.jpg_310x310.jpg"
+						 alt=""></div>
+					<div class="right_content">
+						<div class="item_right_title_wrap">
+							<div class="tag_wrap">
+								<div class="item_right_title">
+									<img src="http://celiang.oss-cn-hangzhou.aliyuncs.com/measurement/2022-11/17/Ek7M0phpEdWZl41668697199221117.png">
+									不艺术!藏在艺术史里的文化研究关键词文化研究关键词文化研究关键词</div>
+
+								<div class="price_wrap d-flex" style="opacity: 1;">
+									<div class="huodong"> ￥<span class="pri">59</span><span></span></div><span class="origin">￥92.5</span>
+								</div>
+								<div class="rexiao d-flex">
+									<div class="rexiao_left"><img src="http://celiang.oss-cn-hangzhou.aliyuncs.com/measurement/2022-11/17/eEixiphpTrBEwW1668697249221117.png"
+										 alt=""> 热销100+件 </div>
+									<div class="qiang"> 马上抢 </div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="goods-row d-flex">
+					<div class="img_item"><img src="https://img.alicdn.com/bao/uploaded/i2/832978172/O1CN01BYQQkn2AEpRElKb3I_!!0-item_pic.jpg_310x310.jpg"
+						 alt=""></div>
+					<div class="right_content">
+						<div class="item_right_title_wrap">
+							<div class="tag_wrap">
+								<div class="item_right_title">
+									<img src="http://celiang.oss-cn-hangzhou.aliyuncs.com/measurement/2022-11/17/Ek7M0phpEdWZl41668697199221117.png">
+									【3-9岁】快乐关键词英语分级w瓢虫</div>
+
+								<div class="price_wrap d-flex" style="opacity: 1;">
+									<div class="huodong"> ￥<span class="pri">48.8</span><span></span></div><span class="origin">￥88</span>
+								</div>
+								<div class="rexiao d-flex">
+									<div class="rexiao_left"><img src="http://celiang.oss-cn-hangzhou.aliyuncs.com/measurement/2022-11/17/eEixiphpTrBEwW1668697249221117.png"
+										 alt=""> 热销100+件 </div>
+									<div class="qiang"> 马上抢 </div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+
+
+	</body>
+		<script>
+			$('.right_content').click(function() {
+				window.location.href = "./detail.html";
+			})
+		</script>
+
+
+</html>
