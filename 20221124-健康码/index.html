@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<meta name="viewport"
+			content="width=device-width,initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+		<style>
+			* {
+				margin: 0;
+				padding: 0;
+
+			}
+
+			.content {
+				position: relative;
+			}
+
+			.content img {
+				width: 100%;
+			}
+
+			.time {
+				position: absolute;
+				/* border: 1px solid red; */
+				/* width: 100px; */
+				height: 50px;
+				left: 50%;
+				top: 48vw;
+				transform: translateX(-50%);
+				display: flex;
+				align-items: center;
+				/* font-size: 16px; */
+				
+			}
+			#new_second{
+				font-size: 20px;
+				/* font-weight: bold; */
+				margin-left: 6px;
+			}
+		</style>
+	</head>
+
+	<body>
+		<div class="content">
+			<img src="./img/bg.png" alt="">
+			<div class="time">
+				<div id="new_time"></div>
+				<div id="new_second"></div>
+			</div>
+		</div>
+	</body>
+	<script>
+		function time() {
+			let nowDate = new Date();
+			let year = nowDate.getFullYear();
+			let month = nowDate.getMonth() + 1 < 10 ? "0" + (nowDate.getMonth() + 1) : nowDate.getMonth() + 1;
+			let date = nowDate.getDate() < 10 ? "0" + nowDate.getDate() : nowDate.getDate();
+			let hour = nowDate.getHours() < 10 ? "0" + nowDate.getHours() : nowDate.getHours();
+			let minute = nowDate.getMinutes() < 10 ? "0" + nowDate.getMinutes() : nowDate.getMinutes();
+			let second = nowDate.getSeconds() < 10 ? "0" + nowDate.getSeconds() : nowDate.getSeconds();
+
+			let new_time = year + "-" + month + "-" + date + " " +  hour + ":" + minute+ ":"
+
+			document.getElementById('new_time').innerText = new_time;
+			document.getElementById('new_second').innerText = second;
+			setInterval(time, 1000);
+		}
+		time()
+	</script>
+</html>

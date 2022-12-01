@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+
+	<head>
+	</head>
+	<body>
+		<h1>There are
+			<span id="days_left""></span>  day(s) left until the new year in the Gregorian calendar.
+		</h1>
+		<script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+		<script>
+			$("document").ready(() => {
+				let today = new Date();
+				let nNewYearsEve = new Date(today.getFullYear(), 11, 31);
+				let nSeconds = 1000 * 60 * 60 * 24;
+				let nDaysLeft = Math.ceil((nNewYearsEve.getTime() - today.getTime()) / (nSeconds))
+
+				console.log(nDaysLeft);
+				$("#days_left").html(nDaysLeft)
+
+			});
+		</script>
+	</body>
+
+</html>

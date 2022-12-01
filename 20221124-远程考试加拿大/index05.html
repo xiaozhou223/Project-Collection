@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+	<head>
+	</head>
+	<style>
+		.red-heading {
+			color: red;
+			background: white;
+		}
+
+		.green_label {
+			background-color: green;
+			color: #fff;
+			width: 450px;
+			padding: 20px;
+
+		}
+
+		.green_label input {
+			padding: 10px;
+			border-radius: 5px;
+			border: none;
+		}
+
+		.type_textarea {
+			padding: 10px;
+			border-radius: 5px;
+		}
+
+		button {
+			padding: 5px 10px;
+		}
+	</style>
+	<body>
+		<main>
+			<h1 class="red-heading">This text is in red</h1>
+			<h2 class="red-heading">... so is this sub-text</h2>
+			<form action="http://localhost:3002/send" method="post" class="green_Box">
+				<p>
+					<label class="green_label">Name：<input name="name" type="text" /></label>
+				</p>
+				<p>
+					<label class="green_label"> Email： <input name="email" type="emai" /></label>
+				</p>
+				<p>
+					<label class="green_label type_textarea">Message：<br />
+						<textarea name="email"></textarea>
+				</p>
+				<p>
+					<button type="submit">Submit</button>
+				</p>
+
+			</form>
+
+		</main>
+		
+		
+	</body>
+
+</html>

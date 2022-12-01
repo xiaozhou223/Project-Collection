@@ -1,0 +1,217 @@
+*{margin: 0;padding: 0;}
+	
+a{
+	text-decoration: none;
+	color: white;	
+}
+a:hover{
+	color: #a68cc9;
+}
+.erji{
+	width: 500px;
+	height: 20px;
+	text-align: center;
+	background-color: white;
+	border-radius: 60px;
+	opacity: 80%;
+	color: #a68cc9;
+	position: fixed;
+	top: 0;
+	left: 600px;
+	z-index: ;
+}
+.erji1{
+	display: none;
+	color: #a68cc9;
+}
+.erji2:hover .erji1{
+	
+	display: block;
+}
+.fillWidth {
+    width: 100%;
+    height: 100%;
+    object-fit:fill;
+	position: fixed;
+  }
+  .navd{
+	 position: fixed;
+	 z-index: 99999;
+	  top: 40%;
+	  right: 0px;
+  }
+.nav{
+	 
+	  z-index: 100;
+	  font-size: 16px;
+}
+.nav1,.nav2,.nav3,.nav4{
+		margin-top: 10px;
+		padding-right: 30px;
+		text-align: right;
+		line-height: 30px;
+		color: white;
+		text-shadow: 0 0 5px rgb(0 0 0 / 20%);
+		transition: all 2s;
+}
+.nav1{
+	background-color: white;
+	color: #a68cc9;
+	text-shadow: 0 0 5px rgb(0 0 0 / 20%);
+	width: 100px;
+	height: 30px;
+	border-radius: 10px 0 0 10px;
+}
+.r{
+	width: 0px;
+	height: 30px;
+	border-radius: 10px 0 0 10px;
+	z-index: -1;
+	transition: all 1s;
+}
+.bg1{
+	position: absolute;
+	right: 0px;
+	top: 32%;
+}
+.bg2{
+	position: absolute;
+	right: 0px;
+	top: 57%;
+}
+.bg3{
+	position: absolute;
+	right: 0px;
+	top:82%;
+}	
+.h:hover{
+	color: #a68cc9;
+	text-shadow: 0 0 5px rgb(0 0 0 / 20%);
+}
+.h:hover .r{
+	width: 130px;
+	background-color: white;	
+}
+.main{
+	width: 100%;
+	height: 1000px;
+	position: absolute;
+	top: 1000px;
+	left: 0px;
+}
+.logo{
+	position: absolute;
+}
+.sy{
+	position: absolute;
+	top: 300px;
+	left: 550px;
+}
+.xw{
+	width: 600px;
+	height: 401px;
+	background-image: url(../img/xwt3.png);
+	border-radius: 30px;
+	position: absolute;
+	top: 150px;
+	left: 250px;
+	padding: 20px;
+	font-size: 18px;
+	color: #645c73;
+}
+li{
+	list-style: none;
+	height: 50px;
+	transition: all 1s;
+}
+.xwt{
+	width: 664px;
+	height: 401px;
+	background-color: white;
+	border-radius: 30px;
+	position: absolute;
+	top: 300px;
+	left: 800px;
+}
+.xwt img{
+	width: 664px;
+	height: 401px;
+	border-radius: 30px;
+	transition: all 1s;
+}
+.xwt:hover img{
+	width: 750px;
+	height: 500px;
+}
+
+.xwd:hover {
+	padding-left: 20px;
+}
+.ts{
+	width: 100%;
+	height: 1000px;
+	position: absolute;
+	top: 2000px;
+	left: 0px;
+}
+.tstu{
+	width: 500px;
+	height: 300px;
+	transition: all 1s;
+}
+.ts1{
+	width: 960px;
+	height: 540px;
+	position: absolute;
+	top: 20px;
+	left: 20%;
+	border-radius: 30px;
+	transition: all 1s;
+}
+.ts2{
+	border-radius: 30px;
+	position: absolute;
+	top: 600px;
+	left: 100px;
+}
+.ts3{
+	border-radius: 30px;
+	position: absolute;
+	top: 600px;
+	left: 300px;
+}
+.ts4{
+	border-radius: 30px;
+	position: absolute;
+	top: 600px;
+	left:500px;
+}
+.ts5{
+	border-radius: 30px;
+	position: absolute;
+	top: 600px;
+	left: 700px;
+}
+.ts6{
+	border-radius: 30px;
+	position: absolute;
+	top: 600px;
+	left: 900px;
+}
+.ts7{
+	border-radius: 30px;
+	position: absolute;
+	top: 600px;
+	left: 1100px;
+}
+.tstu:hover{
+	width: 960px;
+	height: 540px;
+	position: absolute;
+	top: 20px;
+	left: 20%;
+}
+.ts1:hover{
+	width: 1060px;
+	height: 540px;
+}

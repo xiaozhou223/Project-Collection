@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>波纹小球</title>
+	<style>
+		* {
+		    padding: 0;
+		    margin: 0;
+		}
+		body {
+		    background-color: #000000;
+		    color: #fff;
+		}
+		
+		.container {
+		    text-align: center;
+		    position: absolute;
+		    top: 50%;
+		    left: 50%;
+		    transform: translate(-50%,-50%);
+		}
+		h3 {
+		    margin-bottom: 10px;
+		}
+		.box {
+		    width: 450px;
+		    list-style-type: none;
+		}
+		li {
+		    display: inline-block;
+		    width: 14px;
+		    height: 14px;
+		    background-color: #fff;
+		    border-radius: 50%;
+		    margin: 8px;
+		    cursor: pointer;
+		    transition: transform 0.3s linear;
+		}
+		
+		li.grow {
+		    transform: scale(2);
+		  }
+
+	</style>
+    
+</head>
+
+<body>
+    <div class="container">
+        <h3>点击下方小球</h3>
+        <ul class="box"></ul>
+    </div>
+</body>
+<script>
+		window.onload = () => {
+		    // 获取节点
+		    const box = document.getElementsByClassName("box");
+		    const circleArr = [];
+		    let rows = 15; //行
+		    let cols = 15; //列
+		    // let circle = createCircle(); //在循环外面赋值的小圆点，在循环内无法渲染多个
+		    // 循环初始化界面，并把小圆点push到数组中
+		    for (var i = 0; i < rows; i++) {
+		        circleArr[i] = [];
+		        for (var j = 0; j < cols; j++) {
+		            let circle = createCircle();
+		            box[0].appendChild(circle);
+		            circleArr[i].push(circle);
+		        }
+		    }
+		
+		    // 循环数组为每一个小圆点添加监听点击事件
+		    circleArr.forEach((valueArr, row) => {
+		        valueArr.forEach((value, index) => {
+		            value.addEventListener("click", () => {
+		                let color = randomColor();
+		                growCircles(row, index, color);
+		            })
+		        })
+		    })
+		
+		    // 实现动态效果
+		    function growCircles(i, j, color) {
+		        // 确定位置
+		        if (circleArr[i] && circleArr[i][j]) {
+		            // 保证身上没有grow的类名
+		            if (!circleArr[i][j].classList.contains("grow")) {
+		                circleArr[i][j].classList.add("grow");
+		                circleArr[i][j].style.backgroundColor = color;
+		                // 周围小球依次变大
+		                setTimeout(() => {
+		                    growCircles(i - 1, j, color);
+		                    growCircles(i + 1, j, color);
+		                    growCircles(i, j - 1, color);
+		                    growCircles(i, j + 1, color);
+		                }, 100);
+		                // 周围小球再依次还原
+		                setTimeout(() => {
+		                    circleArr[i][j].classList.remove("grow");
+		                }, 300);
+		            }
+		        }
+		    }
+		
+		    // 产生随机背景颜色
+		    function randomColor() {
+		        // let randomNum = parseInt(Math.random()*9);
+		        var str = "0123456789abcdef";
+		        var color = "#";
+		        for(let i =0; i<6; i++){
+		            var randomNum = Math.floor(Math.random()*str.length);
+		            color += str[randomNum];
+		        }
+		        console.log(color);
+		        return color;
+		    }
+		    // randomColor();
+		    // 创建一个小圆点
+		    function createCircle() {
+		        let circle = document.createElement('li');
+		        return circle;
+		    }
+		}
+		
+		
+
+	</script>
+</html>

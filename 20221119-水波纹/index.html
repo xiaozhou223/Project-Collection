@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+		body{background: rgb(154,205,247);}
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body{
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            /* background-image: radial-gradient(white,black); */
+        }
+        .card{
+            width: 200px;
+            height: 300px;
+            box-shadow: 1px 1px 5px #555;
+            cursor: pointer;
+            background-color: rgb(243, 243, 243);
+            position: relative;
+            overflow: hidden;
+        }
+        .card h3,.card p{
+            padding: 5px;
+            text-align: center;
+            font-family: 'fangsong';
+            font-weight: bold;
+            user-select: none;
+        }
+        .card span{
+            position: absolute;
+            transform: translate(-50%,-50%);
+  
+            background-color: rgb(255, 254, 254);
+            border-radius: 50%;
+            animation: big 1s  ;
+        }
+        @keyframes big{
+            0%{
+                width: 0px;
+            height: 0px;
+            opacity: 1;
+            }
+            100%{
+                width: 400px;
+            height: 400px;
+            opacity: 0;
+            }
+        }
+    </style>
+</head>
+<body>
+    
+    <script>
+         
+         
+	window.addEventListener('mousedown', function(e) {
+		//执行函数，并传入鼠标位置
+		box(e.clientX, e.clientY)
+
+		setTimeout(function() {
+			box(e.clientX, e.clientY)
+		}, 250)
+
+		setTimeout(function() {
+			box(e.clientX, e.clientY)
+		},500)
+
+	})
+
+	function box(left, top) {
+		let color=color16()
+		//初始化样式
+		var box = document.createElement("div");
+		box.style.width = '5px';
+		box.style.height = '5px';
+		box.style.borderRadius = '50%';
+		box.style.background=color;
+		// box.style.border = color+' px solid';
+		box.style.position = 'fixed';
+		box.style.top = top - 2.5 + 'px';          //减去元素的宽高，使元素中心位于鼠标点击位置
+		box.style.left = left - 2.5 + 'px';
+		box.style.opacity = 1;
+
+		//向body添加元素
+		document.body.appendChild(box);
+
+		//创建定时器，使波纹一圈圈放大并降低透明度
+		var timer = setInterval(function() {
+			box.style.opacity = box.style.opacity - 0.05;
+			box.style.width = parseInt(box.style.width) + 8 + 'px';
+			box.style.height = parseInt(box.style.height) + 8 + 'px';
+			box.style.left = parseInt(box.style.left) - 4 + 'px';
+			box.style.top = parseInt(box.style.top) - 4 + 'px';
+			
+			if(box.style.opacity <= 0) {
+				clearInterval(timer);
+				box.parentNode.removeChild(box)
+			}
+		},50)
+	}
+	 function color16(){
+	    let r = Math.floor(Math.random()*256);
+	    let g = Math.floor(Math.random()*256);
+	    let b = Math.floor(Math.random()*256);
+	    let color = '#'+r.toString(16)+g.toString(16)+b.toString(16);
+	    return color;
+	 }
+	 
+
+    </script>
+</body>
+</html>
