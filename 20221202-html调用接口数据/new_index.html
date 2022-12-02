@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+		<meta http-equiv="Access-Control-Allow-Origin" content="*" />
+		<title></title>
+		<style type="text/css">
+			* {
+				padding: 0;
+				margin: 0;
+				box-sizing: border-box;
+				/* font-size: 14px; */
+			}
+
+			html {
+				font-size: calc(100vw / 7.5);
+			}
+
+			@media screen and (min-width: 750px) {
+				html {
+					font-size: calc(750px / 7.5);
+				}
+			}
+
+			body {
+				font-size: 15Px;
+				font: 'Microsoft YaHei';
+				width: 7.5rem;
+				margin: 0 auto;
+				background-color: #F5F5F8;
+				color: #666666;
+				
+
+
+			}
+
+
+
+			.d-flex {
+				display: flex;
+			}
+
+			.d-f-w-w {
+				flex-wrap: wrap;
+			}
+
+			.d-a-i-c {
+				align-items: center;
+			}
+
+			.d-j-c-c {
+				justify-content: center;
+			}
+
+			.d-j-c-sb {
+				justify-content: space-between;
+			}
+
+			.main {
+				/* border: 1px solid red; */
+				width: 100%;
+			}
+
+			.page {
+				width: 100%;
+				min-height: 100vh;
+				background: ;
+				padding: 10px;
+				background: blue;
+				/* background: rgba(0, 0, 0, 0.1); */
+			}
+
+			table {
+				font-family: arial, sans-serif;
+				border-collapse: collapse;
+				width: 100%;
+				background: #fff;
+				
+			}
+
+			td,
+			th {
+				border: 1px solid #dddddd;
+				text-align: left;
+				padding: 8px;
+			}
+			td:first-child{
+				text-align: right;
+				width: 65px;
+		
+			}
+
+			th {
+				background-color: #f5f5f5;
+				text-align: center;
+			}
+
+			tr:nth-child(even) {
+			}
+
+			.btn {
+				margin-right: 10px;
+				background-color: #f6f6f6;
+				border-radius: 15px;
+				height: 40px;
+				line-height: 40px;
+				text-align: center;
+				width: 90px;
+				margin-bottom: 10px;
+			}
+
+			.active {
+
+				color: #fff;
+				background-color: rgb(181,134,65);
+			}
+			.formBox{position: fixed;top: 0;bottom: 0;right: 0;left: 0;background: rgba(0,0,0,0.6);}
+			.form-alert{
+				position: absolute;
+				left: 50%;
+				top: 50%;
+				transform: translate(-50%,-50%);
+				border-radius: 18Px;width: 80%; background: #fff;
+			}
+			.form-alert{
+				padding: 20px;
+				line-height: 30px;
+			}
+			.form-alert span{
+				font-weight: bold;
+			}
+			.form-alert input{width: 40vw;padding: 2px 5px;}
+			input::placeholder{
+				color: blue;
+			}
+		</style>
+	</head>
+	<body>
+		<div id="app">
+			<div class="page">
+				<div class="tab-nav d-flex">
+					<div :class="is_active==2?'active btn':'btn'" @click="handleActive(2)">未完成</div>
+					<div :class="is_active==1?'active btn':'btn'" @click="handleActive(1)">已完成</div>
+				</div>
+				<div class="main">
+					<table>
+						<tr>
+							<th>A</th>
+							<th>B</th>
+							<th>C</th>
+							<th>D</th>
+							<th>E</th>
+
+						</tr>
+						<tr>
+							<td>桩序号</td>
+							<td>坐标X</td>
+							<td>标Y</td>
+							<td>桩顶标高</td>
+							<td>桩型号</td>
+						</tr>
+						<tr>
+						<tr v-for="(item,index) in list" :key="index"  @click="handleShow">
+							<td>{{index+1}}</td>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+						</tr>
+
+					</table>
+				</div>
+			</div>
+			<div class="formBox" v-if="showAlert" @click="handleHidden">
+				<div class="form-alert" v-on:click.stop="doThis">
+					<!-- ::::::;第:参考地断点位坐标X:坐标Y:
+					开始时间: -->
+					<div>项目名称：</div>
+					<div>桩序号：</div>
+					<div>桩顶标高：</div>
+					<div>桩型号：</div>
+					<div>实际桩长：</div>
+					<div>正负至持力层标高(m)：</div>
+					<div>入岩深度要求打入的持力层：</div>
+					<div>第1节械长m：</div>
+					<div>第2节桩长m：</div>
+					<div>3节桩长m：</div>
+					<div>参考地勘点位：</div>
+					<div>坐标X：</div>
+					<div>坐标Y：</div>
+					<div><span>开始时间：</span><input type="text" placeholder="点击输入..." ></div>
+					<div><span>结束时间：</span><input type="text" placeholder="点击输入..."></div>
+				</div>
+			</div>
+		</div>
+	</body>
+	<script src="https://webcc-pro.thinkerx.com/plugins/vue/axios.min.js"></script>
+	<script src="https://webcc-pro.thinkerx.com/plugins/vue/vue.js"></script>
+	<script type="text/javascript">
+		new Vue({
+			el: '#app',
+			data() {
+				return {
+					showAlert: false,
+					list: [1,2,3,4,5,6,7,8,9,1,2,3,4,5,6,7,8,9,1,2,3,4,5,6,7,8,9,1,2,3,4,5,6,7,8,9,1,2,3,4,5,6,7,8,9],
+					
+
+					is_active: false,
+					baseUrl: 'https://zzc-serv.thinkerx.com/api',
+					token: '',
+					showLoading: false
+				}
+			},
+			methods: {
+				handleShow(){
+					this.showAlert=true
+					document.querySelector('body').setAttribute('style', 'overflow: hidden;')
+					
+				},
+				handleHidden(){
+					this.showAlert=false
+					document.querySelector('body').removeAttribute('style')
+				},
+				getList() {
+					// axios.get(this.baseUrl + '/out_price_config')
+					// 	.then((res) => {
+					// 		this.list = res.data.data
+					// 	})
+					// 	.catch(function(err) {
+					// 		console.log(err)
+					// 	});
+				},
+				handleActive(v) {
+					this.is_active = v
+				}
+
+			},
+			computed: {
+
+			},
+			mounted() {
+
+			},
+			created() {
+				this.getList()
+			}
+
+		})
+	</script>
+</html>
